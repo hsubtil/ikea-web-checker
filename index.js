@@ -36,11 +36,9 @@ express()
     const storeId= '562'
     const items = [ 
     {id: '10488769', name: 'Kallviken Porte Gris ciment'},
-    {id: '20348896', name: 'ÖSTERNÄS - Poignées cuir'},
     {id: '70246758', name: 'Komplement - Tiroir 100x35'},
     {id: 's59010988', name: 'Komplement - Corbeille 50x58'},
     {id: '20433984', name: 'Komplement - Tiroir Bijoux 100x35'},
-    {id: '60342656', name: 'TRÅDFRI - Transfo elec'},
   ]
     var data = await Promise.all(items.map(async (item) => {
       const tmp = await checker.availability(storeId, item.id);
