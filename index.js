@@ -10,20 +10,16 @@ express()
   .get('/', async (req, res) => {
     const storeId= '562'
     const items = [ 
-    {id: 's69157456', name: 'Lit Manou'},
     {id:'50214560', name: 'Pax 100x235'},
     {id: '80329197', name:'Tyssedal Porte'},
     {id: '20338411', name:'Porte - Poignées'},
     {id: '30214504', name:'Porte - Charnières'},
     {id: '30404028', name:'Tiroir bijoux'},
-    {id: '20246708', name:'Tiroir'},
-    {id: '00446534', name:'Porte pantalons'},
+    {id: '20246708', name:'Tiroir face en verre'},
     {id: '70246386', name:'Plateau coulissant'},
-    {id: '00257298', name:'Corbeille'},
-    {id: '30263245', name:'Corbeille - Rail'},
     {id: '70257638', name:'Tablettes en verre'},
-    {id: '70277957', name:'Tablettes'},
-    {id: '30256891', name:'Tringle'},
+    {id: '70273092', name:'Norraryd chaises'},
+    {id: 's99390948', name:'Hemnes Lit + matelas'},
   ]
     var data = await Promise.all(items.map(async (item) => {
       const tmp = await checker.availability(storeId, item.id);
@@ -35,9 +31,6 @@ express()
   .get('/hugo', async (req, res) => {
     const storeId= '562'
     const items = [ 
-    {id: '10488769', name: 'Kallviken Porte Gris ciment'},
-    {id: '70246758', name: 'Komplement - Tiroir 100x35'},
-    {id: 's59010988', name: 'Komplement - Corbeille 50x58'},
     {id: '20433984', name: 'Komplement - Tiroir Bijoux 100x35'},
   ]
     var data = await Promise.all(items.map(async (item) => {
