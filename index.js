@@ -32,6 +32,7 @@ express()
     const storeId= '562'
     const items = [ 
     {id: '20433984', name: 'Komplement - Tiroir Bijoux 100x35'},
+    {id: '70261150', name: 'Markus chaise de bureau'},
   ]
     var data = await Promise.all(items.map(async (item) => {
       const tmp = await checker.availability(storeId, item.id);
