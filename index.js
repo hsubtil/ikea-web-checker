@@ -20,6 +20,7 @@ express()
     {id: '70257638', name:'Tablettes en verre'},
     {id: '70273092', name:'Norraryd chaises'},
     {id: 's99390948', name:'Hemnes Lit + matelas'},
+    {id: 's19019226', name:'MALM Cadre lit, haut+4rgt'},
   ]
     var data = await Promise.all(items.map(async (item) => {
       const tmp = await checker.availability(storeId, item.id);
