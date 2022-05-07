@@ -32,8 +32,8 @@ express()
   .get('/hugo', async (req, res) => {
     const storeId= '562'
     const items = [ 
-    {id: '20433984', name: 'Komplement - Tiroir Bijoux 100x35'},
-    {id: '70261150', name: 'Markus chaise de bureau'},
+    {id: '90506458', name: 'Bribri black'},
+    {id: '10503656', name: 'Bribri blanc'},
   ]
     var data = await Promise.all(items.map(async (item) => {
       const tmp = await checker.availability(storeId, item.id);
