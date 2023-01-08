@@ -6,22 +6,22 @@
 
 <body>
 
-  <%- include ("../partials/nav.ejs") %>
+  <!-- <%- include ("../partials/nav.ejs") %> -->
 
 <div class="jumbotron text-center">
   <div class="container">
     <a href="/" class="lang-logo">
       <img src="/lang-logo.png">
     </a>
-    <h1>Ikea checker: Clara space</h1>
+    <h1>Les gros chats ikea finder</h1>
   </div>
 </div>
 <div class="container">
   <div class="d-grid gap-3">
   <% for(var i=0; i < data.length; i++) { %>
-    <div class="card mb-5 <%= data[i].stock ? 'text-white bg-success' : '' %>">
+    <div class="card mb-5 <%= data[i].stock ?  'text-white bg-success' : (data[i].restockDate ? 'text-white bg-warning':'') %>">
       <div class="card-body">
-        <p><%= data[i].name %></p>
+        <p><b><%= data[i].name %></b></p>
         <p>Id: <%= data[i].productId %></p>
         <p>Stock: <%= data[i].stock %></p>
         <p>Restock: <%= data[i].restockDate %></p>
